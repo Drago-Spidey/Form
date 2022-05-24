@@ -1,0 +1,237 @@
+
+<div class="content">
+    <div
+      fxLayout="row"
+      fxLayout.xs="Column wrap"
+      fxAlignLayout="space-between center"
+      fxLayoutGap="10px"
+    >
+      
+      <div fxFlex="30%" fxFlex.sm="100%">
+        <agm-map fxFlex="100%" fxFlex.sm="100%" [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng">
+    
+                <agm-info-window>
+                    <strong>InfoWindow content</strong>
+                </agm-info-window>
+    
+            </agm-marker>
+        </agm-map>
+    </div>
+  
+      <div
+        fxLayout="column wrap"
+        fxALignLayout="space-between center"
+        fxFlex="70%"
+        class="sec-col"
+      >
+      <div fxLayout="column" fxAlignlayout="space-between center">
+        <div
+          fxLayout="row wrap"
+          fxAlignLayout="space-between center"
+          fxLayoutGap="10px"
+          class = "row1"
+        >
+        <div
+          fxLayout="column "
+          fxAlignLayout="space-between center"
+          fxFlex ="28%"
+          fxFlex.xs="100%"
+          fxLayout.xs="row wrap"
+          fxAlignLayout.xs="space-between center"
+          fxLayoutGap =10px
+          class = "col1"
+        >
+        <button mat-raised-button fxFlex.xs="50%" class="mapbuttons" >FSS(HTML)</button>
+        <button mat-raised-button fxFlex.xs="45%" class="mapbuttons">Names</button>
+        <button mat-raised-button fxFlex.xs="50%" class="mapbuttons">Co-ordinates</button>
+        <button mat-raised-button fxFlex.xs="45%" class="mapbuttons">Geopol.Locations</button>
+        <button mat-raised-button fxFlex.xs="50%" class="mapbuttons">Basin/Sub-basin</button>
+      </div>
+        
+        <div
+          fxLayout="column"
+          fxAlignLayout="space-between center"
+          fxFlex ="70%"
+          fxFlex.xs="100%"
+        >
+        <div  class="example-container mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+              No.
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+              Country
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="current_name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
+              Current Name
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.current_name}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="number">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Number
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="spud_date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Spud date
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.spud_date}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="compl_date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Compl date
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.compl_date}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="class">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Class
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.class}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="tech_status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Tech status
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.tech_status}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Content
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.content}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="participant">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Participant
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.participant}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="num_of_periods">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              No of periods 
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.num_of_periods}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="resource_type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Resource Type
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.resource_type}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="well_id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Well_ID
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.well_id}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="button">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+              Well_ID
+            </th>
+            <td mat-cell *matCellDef="let element"> <button class="button"></button></td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+          </div>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                         showFirstLastButtons 
+                         aria-label="Select page">
+          </mat-paginator>
+        
+        
+        
+        
+        
+        </div>
+        
+        </div>
+        
+        <div fxLayout="column" fxAlignlayout="space-between center">
+          <div
+            fxLayout="row"
+            fxAlignlayout="space-between center"
+            fxLayoutGap="10px"
+            fxLayout.xs="column"
+          >
+            <mat-form-field appearance="outline" fxFlex="33%">
+              <mat-label>Outline form field</mat-label>
+              <input matInput />
+              <mat-hint></mat-hint>
+            </mat-form-field>
+          
+            <mat-form-field appearance="outline" fxFlex="33%">
+              <mat-label>Outline form field</mat-label>
+              <input matInput />
+              <mat-hint></mat-hint>
+            </mat-form-field>
+          
+            <mat-form-field appearance="outline" fxFlex="33%">
+              <mat-label>Outline form field</mat-label>
+              <input matInput />
+              <mat-hint></mat-hint>
+            </mat-form-field>
+          </div>
+          
+          <div
+           
+            fxLayout="row wrap"
+            fxLayoutAlign="space-between center"
+          
+          >
+          
+              <button mat-raised-button fxFlex="12%" fxFlex.xs="45%" fxFlex.sm="33%">
+                Exit
+              </button>
+              <button mat-raised-button fxFlex="15%" fxFlex.xs="45%" fxFlex.sm="33%">
+                Edin
+              </button>
+              <button mat-raised-button fxFlex="20%" fxFlex.xs="45%" fxFlex.sm="33%">
+                Sheet Report
+              </button>
+              <button mat-raised-button fxFlex="20%" fxFlex.xs="45%" fxFlex.sm="33%">
+                ADM/SDM
+              </button>
+              <button mat-raised-button fxFlex="15%" fxFlex.xs="45%" fxFlex.sm="33%">
+                List
+              </button>
+              <button mat-raised-button fxFlex="12%" fxFlex.xs="45%" fxFlex.sm="33%">
+               Help
+              </button>
+            
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>

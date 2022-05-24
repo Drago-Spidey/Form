@@ -1,0 +1,32 @@
+mat-sidenav-container{
+height: 100%;
+}
+mat-sidenav,mat-sidenav-content{
+    padding: 16px;
+}
+mat-sidenav{
+    background-color: rgb(220, 217, 224);
+}
+
+a mat-icon{
+    color: green;
+}
+
+agm-map {
+    height: 300px;
+    width:30%;
+  }
+.tool1{
+    background-color: rgb(58, 148, 92);
+    height: 38px;
+    color: white;
+    border-radius: 5px;
+    
+}
+::ng-deep .mat-button-wrapper{
+    padding-left: 0px !important;
+}
+.divider{
+    height: 1mm;
+    background-color: white;
+}

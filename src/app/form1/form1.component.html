@@ -1,0 +1,70 @@
+
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav>
+
+        <mat-nav-list (click)="sidenav.close()">
+
+            <a mat-list-item routerLink="/">
+                <mat-icon>library_books</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink="about">
+                <mat-icon>question_answer</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink="drag-drop-example">
+                <mat-icon>drag_indicator</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink="tree-demo">
+                <mat-icon>park</mat-icon>
+                
+            </a>
+
+            <a mat-list-item routerLink="virtual-scrolling">
+                <mat-icon>import_export</mat-icon>
+                
+            </a>
+
+            <a mat-list-item>
+                <mat-icon>person_add</mat-icon>
+                
+            </a>
+
+            <a mat-list-item>
+                <mat-icon>account_circle</mat-icon>
+                
+            </a>
+
+        </mat-nav-list>
+
+
+    </mat-sidenav>
+
+
+    <mat-toolbar class="tool1">
+
+        <button mat-icon-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1>(WQ1) Well selection criteria</h1>
+
+        
+    </mat-toolbar>
+    <mat-divider class="divider"></mat-divider>
+    <mat-toolbar class="tool1">
+        <h2>(WQ1) Enter criteria</h2>
+    </mat-toolbar>
+    <mat-divider class="divider"></mat-divider>
+    <app-form2></app-form2>
+    <mat-divider class="divider"></mat-divider>
+    <mat-toolbar class="tool1">
+        <h2>Select a Well</h2>
+    </mat-toolbar>
+    <mat-divider class="divider"></mat-divider>
+    <app-form3></app-form3>
+    <br>
+    <br>
+    
+</mat-sidenav-container>

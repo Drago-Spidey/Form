@@ -1,0 +1,39 @@
+
+
+th{
+  background-color: rgb(214, 214, 214);
+}
+
+.example-container {
+  max-width: 100%;
+  overflow: auto;
+  height: 300px;
+}
+
+agm-map {
+  height: 300px;
+ 
+}
+.col1{
+  margin: 10px 0px  !important;
+  justify-content: space-between;
+}
+table {
+  width: 100%;
+}
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+}
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+.mat-row:hover .mat-cell {
+  
+  background-color: rgb(198, 255, 217);
+}

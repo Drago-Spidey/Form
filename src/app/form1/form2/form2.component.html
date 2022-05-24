@@ -1,0 +1,132 @@
+
+
+<form class="content">
+
+    <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="space-between center">
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Well name</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Number</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Well Id</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-checkbox
+            formControlName="checkbox"
+            fxFlex="25%"
+            fxFlex.xs="100%" 
+            fxFlex.sm="50%">
+        High impacts only
+        </mat-checkbox>
+    </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="space-around center">
+    
+            <mat-form-field class="country" appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+                <mat-label>Country</mat-label>
+                
+                <mat-icon class="keyboardcontrol" matSuffix mat-icon-button (click)="openDialog()">keyboard_control</mat-icon>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Spud date</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Participants</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Commitments</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+    </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="space-between center">
+        
+            <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>Field</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>Spud Year</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>EPC/Block</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        
+            <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>Situation</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>Classification</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+                <mat-label>Discovery</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="space-between center">        
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Basin/Sub-Basin</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Edin rows</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>Resource Type</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%">
+            <mat-label>UNC type</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="space-between center">  
+            <mat-form-field appearance="outline" fxFlex="35%" fxFlex.xs="100%" fxFlex.sm="60%">
+                <mat-label>QueryName</mat-label>
+                <input matInput>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+        <button mat-raised-button >EDIN Query</button>
+    
+        <button mat-raised-button >OrderBy</button>
+    
+        <mat-form-field appearance="outline" fxFlex="38%" fxFlex.xs="100%" fxFlex.sm="80%">
+            <mat-label>Nothing</mat-label>
+            <input matInput>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <button mat-raised-button ><mat-icon>search</mat-icon>Search</button>
+    
+        </div>
+       
+    </form>
